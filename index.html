@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Niveles y Capas del DFD: De los Diagramas de Contexto al Pseudocódigo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+        }
+        h1, h2, h3 {
+            color: #333;
+        }
+        ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+        .example {
+            background-color: #e7f3fe;
+            border-left: 6px solid #2196F3;
+            padding: 10px;
+            margin: 10px 0;
+        }
+        .best-practices {
+            background-color: #e7ffe7;
+            border-left: 6px solid #4CAF50;
+            padding: 10px;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Niveles y Capas del DFD: De los Diagramas de Contexto al Pseudocódigo</h1>
+
+    <h2>1. Diagrama de Contexto</h2>
+    <p>El diagrama de contexto es el nivel más alto de un DFD (Diagrama de Flujo de Datos) y proporciona una visión general del sistema completo. Muestra el sistema como un único proceso con sus entradas y salidas principales y las interacciones con entidades externas.</p>
+    <div class="example">
+        <h3>Ejemplo:</h3>
+        <p>Un sistema de gestión de inventario puede tener entradas como "Orden de Compra" y salidas como "Factura", interactuando con entidades externas como "Proveedor" y "Cliente".</p>
+    </div>
+    <div class="best-practices">
+        <h3>Mejores Prácticas:</h3>
+        <ul>
+            <li>Mantén el diagrama simple y claro.</li>
+            <li>Identifica correctamente todas las entidades externas.</li>
+        </ul>
+    </div>
+
+    <h2>2. Diagrama de Nivel 0</h2>
+    <p>El diagrama de nivel 0 descompone el proceso único del diagrama de contexto en procesos principales que muestran más detalle del sistema. Cada proceso principal tiene sus propias entradas y salidas, pero no muestra aún todo el detalle del sistema.</p>
+    <div class="example">
+        <h3>Ejemplo:</h3>
+        <p>En el sistema de gestión de inventario, el proceso principal puede ser "Gestión de Órdenes", que se descompone en "Procesar Orden" y "Actualizar Inventario".</p>
+    </div>
+    <div class="best-practices">
+        <h3>Mejores Prácticas:</h3>
+        <ul>
+            <li>Descompón los procesos sin perder la claridad del sistema.</li>
+            <li>Asegúrate de que todas las entradas y salidas del diagrama de contexto están representadas.</li>
+        </ul>
+    </div>
+
+    <h2>3. Diagramas de Nivel 1 y Subsiguientes</h2>
+    <p>Los diagramas de nivel 1 y subsiguientes proporcionan detalles adicionales descomponiendo cada proceso principal del diagrama de nivel 0 en subprocesos más detallados. Este nivel de detalle continúa hasta que cada proceso es lo suficientemente claro para ser entendido y programado.</p>
+    <div class="example">
+        <h3>Ejemplo:</h3>
+        <p>El subproceso "Procesar Orden" se puede descomponer en "Validar Orden", "Generar Factura", y "Enviar Confirmación".</p>
+    </div>
+    <div class="best-practices">
+        <h3>Mejores Prácticas:</h3>
+        <ul>
+            <li>Continúa descomponiendo procesos hasta que cada uno sea manejable y comprensible.</li>
+            <li>Evita la sobrecarga de detalles innecesarios.</li>
+        </ul>
+    </div>
+
+    <h2>4. Pseudocódigo</h2>
+    <p>El pseudocódigo es una descripción de los algoritmos del sistema en un lenguaje que mezcla lenguaje natural con estructuras de programación. No es ejecutable, pero sirve como una guía clara para los programadores.</p>
+    <div class="example">
+        <h3>Ejemplo:</h3>
+        <p>
+            <code>
+                SI cantidad_en_inventario &gt;= cantidad_solicitada ENTONCES<br>
+                &nbsp;&nbsp;actualizar_inventario(cantidad_solicitada)<br>
+                &nbsp;&nbsp;generar_factura(orden)<br>
+                SINO<br>
+                &nbsp;&nbsp;mostrar_mensaje("Cantidad insuficiente en inventario")<br>
+                FIN_SI
+            </code>
+        </p>
+    </div>
+    <div class="best-practices">
+        <h3>Mejores Prácticas:</h3>
+        <ul>
+            <li>Escribe pseudocódigo claro y fácil de seguir.</li>
+            <li>Utiliza estructuras de control básicas como condicionales y bucles.</li>
+            <li>Asegúrate de que el pseudocódigo es comprensible tanto para analistas como para desarrolladores.</li>
+        </ul>
+    </div>
+
+    <h2>Importancia de los Términos en el Análisis y Diseño de Sistemas</h2>
+    <p>Cada uno de estos términos juega un papel crucial en el análisis y diseño de sistemas. Los diagramas de contexto y los niveles subsiguientes ayudan a descomponer y entender la complejidad del sistema, mientras que el pseudocódigo proporciona una guía clara para la implementación técnica.</p>
+
+    <h2>Consejos Prácticos y Mejores Prácticas</h2>
+    <p>Para utilizar eficazmente cada término:</p>
+    <ul>
+        <li>Comienza siempre con un diagrama de contexto claro y sencillo.</li>
+        <li>Descompón los procesos en niveles sucesivos para mantener la claridad.</li>
+        <li>Utiliza pseudocódigo para aclarar la lógica y las reglas de negocio antes de la implementación.</li>
+        <li>Involucra a todas las partes interesadas en la revisión de los DFD y el pseudocódigo para asegurar la precisión y la comprensión.</li>
+    </ul>
+</body>
+</html>
